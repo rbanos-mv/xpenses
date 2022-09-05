@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   }
 
   resources :groups, only: %i[create index new show]
+  resources :expenses, only: %i[create index new show]
 end
