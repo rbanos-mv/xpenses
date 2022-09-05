@@ -1,14 +1,12 @@
 require 'rails_helper'
+require_relative '../shared_file'
 
 RSpec.describe Group, type: :model do
-  describe 'name must not be blank:' do
-    let(:user) do
-      user = User.new(name: 'Roberto', email: 'roberto@mail.com', password: 'valido', password_confirmation: 'valido')
-      user.confirm
-      user
-    end
-    subject!(:group) { Group.create(user:, name: 'Category test 1', icon: 'icon') }
+  include_context 'common_context'
 
+  subject!(:group) { Group.where(user:).first }
+
+  describe 'name must not be blank:' do
     context 'when is nil' do
       before { group.name = nil }
 

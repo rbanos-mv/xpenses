@@ -1,12 +1,10 @@
 require 'rails_helper'
+require_relative '../shared_file'
 
 RSpec.describe Expense, type: :model do
-  let(:user) do
-    user = User.new(name: 'Roberto', email: 'roberto@mail.com', password: 'valido', password_confirmation: 'valido')
-    user.confirm
-    user
-  end
-  subject!(:expense) { Expense.create(user:, name: 'Expanse 1', amount: rand(1000..100_000) / 100) }
+  include_context 'common_context'
+
+  subject!(:expense) { Expense.where(user:).first }
 
   describe 'name must not be blank:' do
     context 'when is nil' do
