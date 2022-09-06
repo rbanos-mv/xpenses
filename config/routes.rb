@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  resources :groups, only: %i[create index new show]
-  resources :expenses, only: %i[create index new show]
+  resources :groups, only: %i[create index new show] do
+    resources :expenses, only: %i[create index new show]
+  end
 end
