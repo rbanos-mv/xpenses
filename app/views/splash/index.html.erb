@@ -1,2 +1,13 @@
-<h1>Splash#index</h1>
-<p>Find me in app/views/splash/index.html.erb</p>
+<section class="column col-between">
+  <div class="column col-center vertical-90">
+    <h1>X-pen-ses</h1>
+  </div>
+  <div>
+    <span class="pv-4">
+      <%= button_to "Log in", new_user_session_path, method: :get, class: "btn-full bg-primary" %>
+    </span>
+    <span class="pv-4">
+      <%= button_to "Sign up", new_user_registration_path, method: :get, class: "btn-full bg-light" %>
+    </span>
+  </div>
+</section>

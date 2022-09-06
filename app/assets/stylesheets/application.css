@@ -13,3 +13,90 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'novabold';
+  src: url("fonts/FontsFree-Net-Proxima-Nova-Bold.otf");
+}
+
+@font-face {
+  font-family: 'novalight';
+  src: url("fonts/FontsFree-Net-Proxima-Nova-Light.ttf");
+}
+
+:root {
+  --primary: #3778c2;
+  --secondary: #5fb523;
+  --white: whitesmoke;
+  --text: #434b54;
+  --sect-width: 420px;
+  --width: 388px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'novalight', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px blue solid;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'novabold', sans-serif;
+}
+
+section {
+  /* background-color: var(--bglight); */
+  border: 2px lightslategray solid;
+  height: calc(100vh - 4px);
+  max-width: var(--sect-width);
+  width: 100%;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.bg-light {
+  background-color: var(--white);
+  color: var(--text);
+}
+
+.btn-full {
+  border: none;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  text-align: center;
+  width: var(--width);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-between {
+  justify-content: space-between;
+}
+
+.col-center {
+  justify-content: center;
+}
+
+.pv-4 {
+  padding: 8px 0;
+}
+
+.vertical-90 {
+  height: 90vh;
+}
