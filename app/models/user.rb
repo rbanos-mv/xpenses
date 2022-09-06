@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   has_many :groups
-  has_many :expenses
+  has_many :expenses, -> { order 'created_at DESC' }
 
   validates :name, presence: true
 end
