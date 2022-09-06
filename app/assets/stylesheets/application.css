@@ -16,12 +16,12 @@
 
 @font-face {
   font-family: 'novabold';
-  src: url("fonts/FontsFree-Net-Proxima-Nova-Bold.otf");
+  src: url("fonts/Proxima-Nova-Bold.otf");
 }
 
 @font-face {
   font-family: 'novalight';
-  src: url("fonts/FontsFree-Net-Proxima-Nova-Light.ttf");
+  src: url("fonts/Proxima-Nova-Light.otf");
 }
 
 :root {
@@ -46,6 +46,39 @@ body {
   border: 2px blue solid;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+form .field {
+  padding: 2px 0;
+}
+
+form .field a {
+  color: var(--text);
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+form .field input {
+  border: none;
+  font-size: large;
+  padding: 12px 8px;
+  width: calc(var(--sect-width) - 8px);
+}
+
+form input[type="submit"] {
+  background-color: var(--primary);
+  border: none;
+  color: var(--light);
+  cursor: pointer;
+  font-size: medium;
+}
+
 h1,
 h2,
 h3,
@@ -53,8 +86,20 @@ h4 {
   font-family: 'novabold', sans-serif;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 4px 8px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
 section {
-  /* background-color: var(--bglight); */
+  background-color: lightcoral;
   border: 2px lightslategray solid;
   height: calc(100vh - 4px);
   max-width: var(--sect-width);
@@ -93,10 +138,59 @@ section {
   justify-content: center;
 }
 
-.pv-4 {
+.filter-white {
+  filter: invert();
+}
+
+.img-w60 {
+  height: auto;
+  padding: 4px;
+  width: 55px;
+}
+
+.p-8 {
+  padding: 8px;
+}
+
+.ph-8 {
+  padding: 0 8px;
+}
+
+.pv-8 {
   padding: 8px 0;
+}
+
+.pv-20 {
+  padding: 20px 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.row-end {
+  justify-content: end;
+}
+
+.row-between {
+  justify-content: space-between;
+}
+
+.text-color {
+  color: var(--text-color);
 }
 
 .vertical-90 {
   height: 90vh;
+}
+
+.width-80px {
+  width: 80px;
 }
