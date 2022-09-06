@@ -4,7 +4,7 @@ require_relative '../shared_file'
 RSpec.describe Group, type: :model do
   include_context 'common_context'
 
-  subject!(:group) { Group.where(user:).first }
+  subject!(:group) { user.groups.first }
 
   describe 'name must not be blank:' do
     context 'when is nil' do

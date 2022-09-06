@@ -4,7 +4,7 @@ require_relative '../shared_file'
 RSpec.describe Expense, type: :model do
   include_context 'common_context'
 
-  subject!(:expense) { Expense.where(user:).first }
+  subject!(:expense) { user.expenses.first }
 
   describe 'name must not be blank:' do
     context 'when is nil' do
