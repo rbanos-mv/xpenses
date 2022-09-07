@@ -1,0 +1,18 @@
+<section>
+  <%= form_with model: @expense, url: group_expenses_path, class: 'form' do |form| %>
+    <%= render partial:'shared/navbar', 
+    locals: {lbutton: "back.svg", back_path: :back, title: "New Expense", form: form, button: "Save"} %>
+
+    <div class="field">
+      <%= form.text_field :group_name, placeholder: :name, :value => @group.icon_and_name, :readonly => true %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :name, autofocus: true, placeholder: :name %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :amount, placeholder: :amount %>
+    </div>
+  <% end %>
+</section>

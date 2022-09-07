@@ -13,3 +13,259 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'novabold';
+  src: url("fonts/Proxima-Nova-Bold.otf");
+}
+
+@font-face {
+  font-family: 'novalight';
+  src: url("fonts/Proxima-Nova-Light.otf");
+}
+
+:root {
+  --primary: #3778c2;
+  --secondary: #5fb523;
+  --white: whitesmoke;
+  --text: #434b54;
+  --sect-width: 420px;
+  --width: 388px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'novalight', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px blue solid;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+form .field {
+  padding: 2px 0;
+}
+
+form .field a {
+  color: var(--text);
+  padding-top: 20px;
+}
+
+form .field input {
+  border: none;
+  font-size: large;
+  padding: 12px 8px;
+  width: calc(var(--sect-width) - 8px);
+}
+
+form input[type="submit"] {
+  background-color: var(--primary);
+  border: none;
+  color: var(--light);
+  cursor: pointer;
+  font-size: medium;
+}
+
+form select {
+  background-color: white;
+  border: none;
+  font-size: xx-large;
+  padding: 12px 8px;
+  text-align: center;
+  width: calc(var(--sect-width) - 8px);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'novabold', sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 4px 8px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+section {
+  background-color: var(--white);
+  border: 2px lightslategray solid;
+  height: calc(100vh - 4px);
+  max-width: var(--sect-width);
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+li {
+  margin: 8px;
+}
+
+.bg-light {
+  background-color: var(--white);
+  color: var(--text);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.btn-full {
+  border: none;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  text-align: center;
+  width: var(--width);
+}
+
+.card {
+  background-color: white;
+  padding: 8px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-between {
+  justify-content: space-between;
+}
+
+.col-center {
+  justify-content: center;
+}
+
+.filter-white {
+  filter: invert();
+}
+
+.fs-12px {
+  font-size: 12px;
+}
+
+.height-50px {
+  height: 50px;
+}
+
+.icon-20 {
+  font-size: 30px;
+  padding: 4px;
+}
+
+.img-w60 {
+  height: auto;
+  padding: 4px;
+  width: 55px;
+}
+
+.mh-110 {
+  max-height: calc(100vh - 110px);
+}
+
+.mh-185 {
+  max-height: calc(100vh - 185px);
+}
+
+.mv-2px {
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.p-4-8 {
+  padding: 4px 8px;
+}
+
+.p-8 {
+  padding: 8px;
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+.ph-8 {
+  padding: 0 8px;
+}
+
+.pv-8 {
+  padding: 8px 0;
+}
+
+.pv-20 {
+  padding: 20px 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.row-end {
+  justify-content: end;
+}
+
+.row-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.vertical-90 {
+  height: 90vh;
+}
+
+.width-80px {
+  width: 80px;
+}

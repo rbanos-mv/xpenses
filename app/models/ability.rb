@@ -28,5 +28,10 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
 
     return unless user.present?
+
+    can :read, :all
+    can :manage, Group, user: user
+    can :manage, Expense, user: user
+    can :manage, Record
   end
 end

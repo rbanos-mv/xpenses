@@ -1,0 +1,14 @@
+<section>
+  <%= form_with model: @group, class: 'form' do |form| %>
+    <%= render partial:'shared/navbar', 
+    locals: {lbutton: "back.svg", back_path: :back, title: "New Category", form: form, button: "Save"} %>
+
+    <div class="field">
+      <%= form.text_field :name, autofocus: true, placeholder: :name %>
+    </div>
+
+    <div class="field">
+      <%= form.select :icon, @icons.map { |i| [i.to_s, i.to_s] }, {} %>
+    </div>
+  <% end %>
+</section>

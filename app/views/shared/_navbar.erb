@@ -1,0 +1,13 @@
+<nav>
+  <span class="width-80px">
+    <%= link_to_unless back_path.empty?, image_tag(lbutton, id:'nav-lbutton', class: "filter-white", size: "30"), back_path %>
+  </span>
+  <h1><%= title %></h1>
+  <div class="row row-end width-80px actions">
+    <% if defined? form %>
+      <%= form.submit button %>
+    <% else %>
+      <%= link_to image_tag('logout.svg', id:'nav-rbutton', class: "filter-white", size: "30"), destroy_user_session_path, data: { turbo_method: :delete } %>
+    <% end %>
+  </div>
+</nav>

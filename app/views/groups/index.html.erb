@@ -1,0 +1,17 @@
+<section class="column col-between">
+  <div>
+    <%= render partial:'shared/navbar', 
+    locals: {lbutton: "menu.svg", back_path:'', title: "Categories",  rbutton: :logout} %>
+
+    <% if @groups.empty? %>
+      <h2>There are no groups</h2>
+    <% else %>
+      <ul id="category_list" class="mh-110">
+        <%= render @groups %>
+      </ul>
+    <% end %>
+  </div>
+  <div class="pv-8">
+    <%= button_to "Add category", new_group_path, method: :get, class: "btn-full bg-secondary" %>
+  </div>
+</section>

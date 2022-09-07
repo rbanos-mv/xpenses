@@ -1,14 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# XpenseS
 
-> Description the project.
+> XpenseS is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what..
 
 ## Built With
 
 - Ruby on Rails
 - PostgreSQL
-- devise / devise-jwt - for authentication
+- devise - for authentication
 - cancancan - for authorization
 
 ### Getting Started
@@ -46,8 +46,6 @@ rails secret
     - DATABASE_HOST
     - DATABASE_USER
     - DATABASE_PASSWORD
-    - DEVISE_JWT_SECRET_KEY
-  - Assign the value returned by the `rails secret` to DEVISE_JWT_SECRET_KEY.
 
 - Type this commands into the terminal:
 
@@ -94,6 +92,8 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - [Microverse](https://www.microverse.org/) for the motivation.
+- Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+- Logo by [Iraida Elisa Baños Zúñiga](https://invertebrand.com/)
 
 ## 📝 License
 
