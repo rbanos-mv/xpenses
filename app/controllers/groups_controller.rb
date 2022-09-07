@@ -9,11 +9,11 @@ class GroupsController < ApplicationController
   end
 
   def index
-    # implement
+    @groups = current_user.groups
   end
 
   def new
-    # implement
+    @icons = Group.icon_list
   end
 
   def show
