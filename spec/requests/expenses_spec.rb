@@ -55,7 +55,7 @@ RSpec.describe 'Expenses', type: :request do
       end
 
       it 'Has correct placeholder text' do
-        expect(response.body).to include('Expenses#index')
+        expect(response.body).to include('<h1>Expenses</h1>')
       end
     end
   end
@@ -72,7 +72,7 @@ RSpec.describe 'Expenses', type: :request do
     end
 
     it 'Has correct placeholder text' do
-      expect(response.body).to include('Expenses#new')
+      expect(response.body).to include('<h1>New Expense</h1>')
     end
   end
 

@@ -53,7 +53,7 @@ RSpec.describe 'Groups', type: :request do
       end
 
       it 'Has correct placeholder text' do
-        expect(response.body).to include('Groups#index')
+        expect(response.body).to include('<h1>Categories</h1>')
       end
     end
   end
@@ -70,7 +70,7 @@ RSpec.describe 'Groups', type: :request do
     end
 
     it 'Has correct placeholder text' do
-      expect(response.body).to include('Groups#new')
+      expect(response.body).to include('New Category')
     end
   end
 

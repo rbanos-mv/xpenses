@@ -13,8 +13,16 @@ RSpec.describe 'Splash', type: :request do
         get root_path
       end
 
-      it 'shows page content' do
-        expect(response.body).to include('Splash#index')
+      it 'has the app logo' do
+        expect(response.body).to include('assets/xpenses1')
+      end
+
+      it 'has the Log In button' do
+        expect(response.body).to include('Log in')
+      end
+
+      it 'has the Sign Up button' do
+        expect(response.body).to include('Sign up')
       end
 
       it 'returns http success' do
