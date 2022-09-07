@@ -39,6 +39,10 @@
   font-family: 'novalight', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -61,7 +65,6 @@ form .field {
 form .field a {
   color: var(--text);
   padding-top: 20px;
-  text-decoration: none;
 }
 
 form .field input {
@@ -77,6 +80,15 @@ form input[type="submit"] {
   color: var(--light);
   cursor: pointer;
   font-size: medium;
+}
+
+form select {
+  background-color: white;
+  border: none;
+  font-size: xx-large;
+  padding: 12px 8px;
+  text-align: center;
+  width: calc(var(--sect-width) - 8px);
 }
 
 h1,
@@ -99,11 +111,27 @@ nav {
 }
 
 section {
-  background-color: lightcoral;
+  background-color: var(--white);
   border: 2px lightslategray solid;
   height: calc(100vh - 4px);
   max-width: var(--sect-width);
   width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+li {
+  margin: 8px;
+}
+
+.bg-light {
+  background-color: var(--white);
+  color: var(--text);
 }
 
 .bg-primary {
@@ -111,9 +139,13 @@ section {
   color: var(--white);
 }
 
-.bg-light {
-  background-color: var(--white);
-  color: var(--text);
+.bg-secondary {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .btn-full {
@@ -124,10 +156,15 @@ section {
   width: var(--width);
 }
 
+.card {
+  background-color: white;
+  padding: 8px;
+}
+
 .column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .col-between {
@@ -142,14 +179,48 @@ section {
   filter: invert();
 }
 
+.fs-12px {
+  font-size: 12px;
+}
+
+.height-50px {
+  height: 50px;
+}
+
+.icon-20 {
+  font-size: 30px;
+  padding: 4px;
+}
+
 .img-w60 {
   height: auto;
   padding: 4px;
   width: 55px;
 }
 
+.mh-110 {
+  max-height: calc(100vh - 110px);
+}
+
+.mh-185 {
+  max-height: calc(100vh - 185px);
+}
+
+.mv-2px {
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.p-4-8 {
+  padding: 4px 8px;
+}
+
 .p-8 {
   padding: 8px;
+}
+
+.p-16 {
+  padding: 16px;
 }
 
 .ph-8 {
@@ -181,6 +252,10 @@ section {
 
 .row-between {
   justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-color {
