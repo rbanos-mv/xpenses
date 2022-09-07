@@ -9,7 +9,7 @@
 def setpwd(user)
   user.password = 'valido'
   user.password_confirmation = 'valido'
-  user.confirm
+  user.save
   user
 end
 
@@ -19,10 +19,11 @@ users = [
 ]
 
 def create_groups(user)
+  icons = Group.icon_list
   group_ids = []
   (0..9).each do |i|
     id = ((2 - (user.id % 2)) * 10) + i
-    group = Group.create(user:, name: "Category #{id}", icon: 'icon')
+    group = Group.create(user:, name: "Category #{id}", icon: icons[i])
     group_ids << group.id unless i < 3
   end
   group_ids
@@ -31,7 +32,7 @@ end
 def create_expenses(user, group_ids)
   (0..5).each do |i|
     id = ((2 - (user.id % 2)) * 10) + i
-    expense = Expense.create(user:, name: "Expanse #{id}", amount: rand(1000..100_000) / 100)
+    expense = Expense.create(user:, name: "Expense #{id}", amount: rand(1000..100_000) / 100)
     combine(expense, group_ids)
   end
 end
