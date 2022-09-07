@@ -1,2 +1,22 @@
-<h1>Expenses#index</h1>
-<p>Find me in app/views/expenses/index.html.erb</p>
+<section class="column col-between">
+  <div>
+    <%= render partial:'shared/navbar', 
+    locals: {lbutton: "back.svg", back_path: groups_path, title: "Expenses",  rbutton: :logout} %>
+
+    <div class="card row row-between p-16">
+      <span class="row"><span class="icon-20"><%= @group.icon %></span><%= @group.name %></span><span class="bold"><%= number_to_currency(@group.total) %></span>
+    </div>
+    <ul id="category_list" class="mh-185">
+      <% if @expenses.empty? %>
+        <li class="card text-center">
+          <h2>There are no expenses</h2>
+        </li>
+      <% else %>
+        <%= render @expenses %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="pv-8">
+    <%= button_to "Add expense", new_group_expense_path(group_id: @group.id), method: :get, class: "btn-full bg-secondary" %>
+  </div>
+</section>
