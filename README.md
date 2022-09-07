@@ -4,6 +4,15 @@
 
 > XpenseS is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what..
 
+## Live demo
+
+- Visit: https://glacial-thicket-62528.herokuapp.com/
+  - Sign up to create your user and password before you can use the app.
+
+## Recorded video
+
+- [Click on this link](https://www.loom.com/share/ae4dae3a521d4f1490e6a64100806578) to watch a demo recorded in video.
+
 ## Built With
 
 - Ruby on Rails
