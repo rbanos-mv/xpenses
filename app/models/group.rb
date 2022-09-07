@@ -12,7 +12,6 @@ class Group < ApplicationRecord
 
   def total
     expenses.sum(:amount)
-    # implement
   end
 
   def self.icon_list
