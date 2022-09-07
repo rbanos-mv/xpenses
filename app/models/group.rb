@@ -6,15 +6,16 @@ class Group < ApplicationRecord
   validates :name, presence: true
   validates :icon, presence: true
 
-  def all_records
-    # implement
-  end
-
-  def count
-    # implement
+  def icon_and_name
+    "#{icon} #{name}"
   end
 
   def total
+    expenses.sum(:amount)
     # implement
+  end
+
+  def self.icon_list
+    ['✈️', '🍔', '🛍️', '🥕', '💰', '💅', '🍹', '🎁', '🏥', '🏠', '🚋', '🚰']
   end
 end
