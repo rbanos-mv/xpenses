@@ -1,0 +1,11 @@
+<li class="card">
+  <%= link_to group_expenses_path(group_id: group.id) do %>
+    <div class="row row-between">
+      <span class="row p-8">
+        <span class="icon-20"><%= group.icon %></span>
+        <span class="p-8"><%= group.name %></span>
+      </span>
+      <span class="p-8"><%= number_to_currency(group.total) %></span>
+    </div>
+  <% end %>
+</li>
