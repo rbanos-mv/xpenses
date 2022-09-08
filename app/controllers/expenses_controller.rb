@@ -7,7 +7,7 @@ class ExpensesController < ApplicationController
     else
       flash[:alert] = 'Expense not saved'
     end
-    redirect_to group_expenses_path(group_id:)
+    redirect_to group_expenses_path(group_id)
   end
 
   def index
