@@ -1,0 +1,31 @@
+<section>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render partial:'shared/navbar', 
+    locals: {lbutton: "back.svg", back_path: root_path, title: "Register", form: f, button: "Next"} %>
+
+    <div class="row p-8">
+      <div>
+        <img src=<%=image_path('user.png')%> id='image-file' class="img-w60"/>
+      </div>
+      <div class="ph-8">Upload picture</div>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, autocomplete: :name, placeholder: :full_name %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, autocomplete: "email", placeholder: :email %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: :password %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: :confirm_password %>
+    </div>
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+  <% end %>
+</section>

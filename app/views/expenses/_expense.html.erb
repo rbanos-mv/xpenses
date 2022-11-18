@@ -1,0 +1,9 @@
+<li class="card">
+  <div class="row row-between">
+    <div class="column p-8">
+      <span class="p-4-8"><%= expense.name %></span>
+      <span class="p-4-8 fs-12px"><%= expense.created_at.strftime("%d %B %Y") %></span>
+    </div>
+    <span class="p-8 bold"><%= number_to_currency(expense.amount) %></span>
+  </div>
+</li>

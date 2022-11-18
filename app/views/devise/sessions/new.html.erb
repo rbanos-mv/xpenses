@@ -1,0 +1,22 @@
+<section>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= render partial:'shared/navbar', 
+    locals: {lbutton: "back.svg", back_path: root_path, title: "Login", form: f, button: "Next"} %>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: :email %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: :password %>
+    </div>
+
+    <div class="field row row-center">
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Forgot your password?", new_password_path(resource_name) %><br/>
+      <% end %>
+    </div>
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+  <% end %>
+</section>
