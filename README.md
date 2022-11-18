@@ -8,7 +8,7 @@
 
 ## Live demo
 
-- Visit: https://glacial-thicket-62528.herokuapp.com/
+- Visit: https://xpenses.onrender.com/
   - Sign up to create your user and password before you can use the app.
 
 ## Recorded video
@@ -38,8 +38,8 @@ To get a local copy up and running follow these simple steps:
 - Type these commands into the terminal:
 
 ```
-git clone https://github.com/rbanos-mv/capstone-5-expenses.git
-cd capstone-5-expenses
+git clone https://github.com/rbanos-mv/xpenses.git
+cd xpenses
 bundle install
 ```
 
